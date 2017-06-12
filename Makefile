@@ -15,4 +15,5 @@ endif
 all: priv/exec.so
 
 priv/exec.so: c_src/exec.c
+	mkdir -p priv
 	cc -fPIC -I$(ERL_INCLUDE_PATH) $(FLAGS) -o priv/exec.so c_src/exec.c

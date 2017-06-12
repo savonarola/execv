@@ -33,7 +33,7 @@ defmodule Execv.Mixfile do
   defp package do
     [
       name: :execv,
-      files: ["lib", "mix.exs", "README*", "LICENSE", "Makefile", "c_src", "priv"],
+      files: ["lib", "mix.exs", "README*", "LICENSE", "Makefile", "c_src"],
       maintainers: ["Ilya Averyanov"],
       licenses: ["MIT"],
       links: %{
