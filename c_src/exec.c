@@ -52,8 +52,6 @@ free_exec_argv(char ** exec_argv, int argc)
     enif_free(exec_argv);
 }
 
-#define MAX_PATH 65536
-
 static ERL_NIF_TERM
 exec_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
 {
@@ -69,7 +67,7 @@ exec_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
         return error(env, "args_not_a_list");
 
     if(exec_argv_len < 1)
-        return error(env, "empty_pist");
+        return error(env, "empty_arg_list");
 
     char **exec_argv = (char **)enif_alloc(exec_argv_len + 1);
     if(!exec_argv)
