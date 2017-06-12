@@ -12,11 +12,13 @@ defmodule Execv.Mixfile do
     [
       app: :execv,
       compilers: [:execv] ++ Mix.compilers,
+      description: "Elixir interface to exec system call",
       version: "0.1.0",
       elixir: "~> 1.3",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
     ]
   end
 
@@ -25,6 +27,19 @@ defmodule Execv.Mixfile do
   end
 
   defp deps do
-    []
+    [{:ex_doc, "~> 0.14", only: :dev, runtime: false}]
   end
+
+  defp package do
+    [
+      name: :execv,
+      files: ["lib", "mix.exs", "README*", "LICENSE", "Makefile", "c_src", "priv"],
+      maintainers: ["Ilya Averyanov"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/savonarola/execv"
+      }
+    ]
+  end
+
 end
