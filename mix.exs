@@ -13,7 +13,7 @@ defmodule Execv.Mixfile do
       app: :execv,
       compilers: [:execv] ++ Mix.compilers,
       description: "Elixir interface to exec system call",
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.3",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
