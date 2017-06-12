@@ -1,10 +1,10 @@
-defmodule ExecTest do
+defmodule ExecvTest do
   use ExUnit.Case
 
   test "exec" do
-    assert {:error, _} = Exec.exec([])
-    assert {:error, _} = Exec.exec([1])
-    assert {:error, _} = Exec.exec(["foo", 1])
-    assert {:error, _} = Exec.exec(["foo"])
+    assert {:error, _} = Execv.exec([])
+    assert {:error, _} = Execv.exec([1])
+    assert {:error, _} = Execv.exec(["foo", 1])
+    assert {:error, _} = Execv.exec(["foo"])
   end
 end

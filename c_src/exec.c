@@ -121,5 +121,5 @@ static ErlNifFunc nif_funcs[] = {
 };
 
 
-ERL_NIF_INIT(Elixir.Exec, nif_funcs, &load, NULL, NULL, NULL);
+ERL_NIF_INIT(Elixir.Execv, nif_funcs, &load, NULL, NULL, NULL);
 

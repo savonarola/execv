@@ -1,4 +1,4 @@
-defmodule Exec do
+defmodule Execv do
   @moduledoc false
 
   @exec_so_content File.read!("priv/exec.so")
