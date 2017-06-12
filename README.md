@@ -1,4 +1,4 @@
-# Exec
+# Execv
 
 Elixir interface to `exec` system call.
 
@@ -9,7 +9,7 @@ by adding `exec` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:exec, "~> 0.1.0"}]
+  [{:execv, "~> 0.1.0"}]
 end
 ```
 
@@ -17,13 +17,13 @@ end
 
 ```elixir
 
-Exec.exec(["/usr/bin/ssh", "my@server"])
+Execv.exec(["/usr/bin/ssh", "my@server"])
 
-Exec.exec(["/bin/echo", "foo", "bar"])
+Execv.exec(["/bin/echo", "foo", "bar"])
 
-{:error, _} = Exec.exec(["/bin/echoWRONG", "foo", "bar"])
+{:error, _} = Execv.exec(["/bin/echoWRONG", "foo", "bar"])
 
-{:error, _} = Exec.exec([123])
+{:error, _} = Execv.exec([123])
 
 ```
 
